@@ -1,0 +1,146 @@
+#include<stdio.h>
+#include<stdlib.h>
+#include<conio.h>
+#include<time.h>
+#include<windows.h>
+#include<ctype.h>
+#include<locale.h>
+
+int main(){
+	setlocale (LC_ALL, "Portuguese");
+  char player_1[4], player_2[4];
+int d, j, g, errou;
+printf ("\nNo jogo da senha você deve informar 4 letras entre A e F, sem repetição, para que seu colega descubra. Bom jogo.\n");
+for(d=0; d<4; d++){
+printf ("\nInforme a %d Letra , das 4 letras de A ate F -->\n ",d + 1 );
+scanf("%c", &player_1[d]);
+scanf("%c");
+while(player_1[d] != 'a' && player_1[d] != 'b' && player_1[d] != 'c' && player_1[d] != 'd' && player_1[d] != 'e' && player_1[d] != 'f'){
+printf("Apenas letras entre A e F. Tente novamente.");
+printf("\nInforme a %dº letra: ", d+1);
+scanf("%c", &player_1[d]);
+scanf("%c");
+}
+while(player_1[1] == player_1[0]){
+printf("Sem repetição de letras. Tente novamente.");
+printf("\nInforme a %dº letra: ", d+1);
+scanf("%c", &player_1[d]);
+scanf("%c");
+}
+while(player_1[d] != 'a' && player_1[d] != 'b' && player_1[d] != 'c' && player_1[d] != 'd' && player_1[d] != 'e' && player_1[d] != 'f'){
+printf("Apenas letras entre A e F. Tente novamente.");
+printf("\nInforme a %dº letra: ", d+1);
+scanf("%c", &player_1[d]);
+scanf("%c");
+}
+while(d == 2 && player_1[2] == player_1[1] || d == 2 && player_1[2] == player_1[0]){
+printf("Sem repetição de letras. Tente novamente.");
+printf("\nInforme a %dº letra: ", d+1);
+scanf("%c", &player_1[d]);
+scanf("%c");
+}
+while(player_1[d] != 'a' && player_1[d] != 'b' && player_1[d] != 'c' && player_1[d] != 'd' && player_1[d] != 'e' && player_1[d] != 'f'){
+printf("Apenas letras entre A e F. Tente novamente.");
+printf("\nInforme a %dº letra: ", d+1);
+scanf("%c", &player_1[d]);
+scanf("%c");
+}
+while(d == 3 && player_1[3] == player_1[2] || d == 3 && player_1[3] == player_1[1] || d == 3 &&  player_1[3] == player_1[0]){
+printf("Sem repetição de letras. Tente novamente.");
+printf("\nInforme a %dº letra: ", d+1);
+scanf("%c", &player_1[d]);
+scanf("%c");
+}
+while(player_1[d] != 'a' && player_1[d] != 'b' && player_1[d] != 'c' && player_1[d] != 'd' && player_1[d] != 'e' && player_1[d] != 'f'){
+printf("Apenas letras entre A e F. Tente novamente.");
+printf("\nInforme a %dº letra: ", d+1);
+scanf("%c", &player_1[d]);
+scanf("%c");
+}
+}
+
+system("cls");
+
+printf("\nAgora você deverá descobrir a senha informada pelo jogador 1,sendo 4 letras entre A e F,sem repetição.\n");
+printf("\nVocê receberá o se a letra estiver certa mas na posição errada, e x se estiver certa na posição certa. Bom jogo.\n");
+for(errou=0; errou<10; errou++){
+for(j=0; j<4; j++){
+printf ("\nDigite a %d Letra , das 4 letras de A ate F -->\n ",j + 1 );
+scanf("%c", &player_2[j]);
+scanf("%c");
+while(player_2[j] != 'a' && player_2[j] != 'b' && player_2[j] != 'c' && player_2[j] != 'd' && player_2[j] != 'e' && player_2[j] != 'f'){
+printf("Apenas letras entre A e F. Tente novamente");
+printf("\nDigite a %dº letra: ", j+1);
+scanf("%c", &player_2[j]);
+scanf("%c");
+}
+while(player_2[1] == player_2[0]){
+printf("Sem repetição de letras. Tente novamente.");
+printf("\nDigite a %dº letra: ", j+1);
+scanf("%c", &player_2[j]);
+scanf("%c");
+}
+while(player_2[j] != 'a' && player_2[j] != 'b' && player_2[j] != 'c' && player_2[j] != 'd' && player_2[j] != 'e' && player_2[j] != 'f'){
+printf("Apenas letras entre A e F. Tente novamente.");
+printf("\nDigite a %dº letra: ", j+1);
+scanf("%c", &player_2[j]);
+scanf("%c");
+}
+while(j == 2 && player_2[2] == player_2[1] || j == 2 &&  player_2[2] == player_2[0]){
+printf("Sem repetição de letras. Tente novamente.");
+printf("\nDigite a %dº letra: ", j+1);
+scanf("%c", &player_2[j]);
+scanf("%c");
+}
+while(player_2[j] != 'a' && player_2[j] != 'b' && player_2[j] != 'c' && player_2[j] != 'd' && player_2[j] != 'e' && player_2[j] != 'f'){
+printf("Apenas letras entre A e F. Tente novamente");
+printf("\nDigite a %dº letra: ", j+1);
+scanf("%c", &player_2[j]);
+scanf("%c");
+}
+while(j == 3 && player_2[3] == player_2[2] || j == 3 && player_2[3] == player_2[1] || j == 3 && player_2[3] == player_2[0]){
+printf("Sem repetição de letras. Tente novamente.");
+printf("\nDigite a %dº letra: ", j+1);
+scanf("%c", &player_2[j]);
+scanf("%c");
+}
+while(player_2[j] != 'a' && player_2[j] != 'b' && player_2[j] != 'c' && player_2[j] != 'd' && player_2[j] != 'e' && player_2[j] != 'f'){
+printf("Apenas letras entre A e F. Tente novamente");
+printf("\nDigite a %dº letra: ", j+1);
+scanf("%c", &player_2[j]);
+scanf("%c");
+}
+}
+
+for(g=0;g<4;g++){
+if(player_1[g] == player_2[g]){
+printf("X");
+
+}else{
+printf("O");
+
+}
+printf("\n");
+}
+if(player_1[0] == player_2[0] && player_1[1] == player_2[1] && player_1[2] == player_2[2] && player_1[3] == player_2[3]){
+printf("Você venceu.");
+printf("\nGostaria de jogar de novo?  [S-N]  ");
+break;
+}else{
+
+
+if(errou == 10){
+printf("Você perdeu.");
+for(j=0;j<4;j++){
+printf("%d ",player_1[d]);
+printf("\nGostaria de jogar de novo?[S-N]\n");
+}
+}
+}
+}
+
+
+ 
+   
+  return 0;
+}
